@@ -11,6 +11,8 @@ const API = `${BACKEND_URL}/api`;
 
 const DocumentProcessor = () => {
   const [file, setFile] = useState(null);
+  const [fileId, setFileId] = useState(null);
+  const [supportedFormats, setSupportedFormats] = useState({ input: [], output: [] });
   const [outputFormat, setOutputFormat] = useState('');
   const [isUploading, setIsUploading] = useState(false);
   const [isConverting, setIsConverting] = useState(false);
@@ -19,24 +21,59 @@ const DocumentProcessor = () => {
   const [analysisResult, setAnalysisResult] = useState(null);
   const { toast } = useToast();
 
-  const handleFileUpload = (event) => {
-    const uploadedFile = event.target.files[0];
-    if (uploadedFile) {
-      setIsUploading(true);
-      // Simulate upload delay
-      setTimeout(() => {
-        setFile(uploadedFile);
-        setIsUploading(false);
-        toast({
-          title: "File uploaded successfully",
-          description: `${uploadedFile.name} is ready for processing.`,
+  // Load supported formats on component mount
+  useEffect(() => {
+    const loadSupportedFormats = async () => {
+      try {
+        const response = await axios.get(`${API}/formats`);
+        setSupportedFormats(response.data);
+      } catch (error) {
+        console.error('Error loading supported formats:', error);
+        // Fallback to default formats
+        setSupportedFormats({
+          input: ['PDF', 'DOCX', 'DOC', 'TXT', 'RTF', 'ODT'],
+          output: ['PDF', 'DOCX', 'DOC', 'TXT', 'RTF', 'ODT', 'HTML']
         });
-      }, 1500);
+      }
+    };
+    loadSupportedFormats();
+  }, []);
+
+  const handleFileUpload = async (event) => {
+    const uploadedFile = event.target.files[0];
+    if (!uploadedFile) return;
+
+    setIsUploading(true);
+    const formData = new FormData();
+    formData.append('file', uploadedFile);
+
+    try {
+      const response = await axios.post(`${API}/upload`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      setFile(uploadedFile);
+      setFileId(response.data.file_id);
+      setIsUploading(false);
+      
+      toast({
+        title: "File uploaded successfully",
+        description: `${uploadedFile.name} is ready for processing.`,
+      });
+    } catch (error) {
+      setIsUploading(false);
+      toast({
+        title: "Upload failed",
+        description: error.response?.data?.detail || "Failed to upload file. Please try again.",
+        variant: "destructive",
+      });
     }
   };
 
-  const handleConvert = () => {
-    if (!file || !outputFormat) {
+  const handleConvert = async () => {
+    if (!fileId || !outputFormat) {
       toast({
         title: "Missing information",
         description: "Please upload a file and select an output format.",
@@ -46,19 +83,31 @@ const DocumentProcessor = () => {
     }
 
     setIsConverting(true);
-    // Simulate conversion delay
-    setTimeout(() => {
-      setConversionResult(mockConversion);
+    try {
+      const response = await axios.post(`${API}/convert`, {
+        file_id: fileId,
+        target_format: outputFormat,
+      });
+
+      setConversionResult(response.data);
       setIsConverting(false);
+      
       toast({
         title: "Conversion completed",
         description: "Your document has been successfully converted.",
       });
-    }, 3000);
+    } catch (error) {
+      setIsConverting(false);
+      toast({
+        title: "Conversion failed",
+        description: error.response?.data?.detail || "Failed to convert file. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
-  const handleAnalyze = () => {
-    if (!file) {
+  const handleAnalyze = async () => {
+    if (!fileId) {
       toast({
         title: "No file uploaded",
         description: "Please upload a file first to analyze.",
@@ -68,15 +117,56 @@ const DocumentProcessor = () => {
     }
 
     setIsAnalyzing(true);
-    // Simulate analysis delay
-    setTimeout(() => {
-      setAnalysisResult(mockAnalysis);
+    try {
+      const response = await axios.post(`${API}/analyze`, {
+        file_id: fileId,
+      });
+
+      setAnalysisResult(response.data);
       setIsAnalyzing(false);
+      
       toast({
         title: "Analysis completed",
         description: "Legal document analysis is ready for review.",
       });
-    }, 4000);
+    } catch (error) {
+      setIsAnalyzing(false);
+      toast({
+        title: "Analysis failed",
+        description: error.response?.data?.detail || "Failed to analyze document. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleDownload = async () => {
+    if (!conversionResult?.conversion_id) return;
+    
+    try {
+      const response = await axios.get(`${API}/download/${conversionResult.conversion_id}`, {
+        responseType: 'blob',
+      });
+      
+      // Create download link
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', conversionResult.converted_file);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      
+      toast({
+        title: "Download started",
+        description: "Your converted file is being downloaded.",
+      });
+    } catch (error) {
+      toast({
+        title: "Download failed",
+        description: "Failed to download converted file. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -165,7 +255,7 @@ const DocumentProcessor = () => {
               
               <Button 
                 onClick={handleConvert}
-                disabled={!file || !outputFormat || isConverting}
+                disabled={!fileId || !outputFormat || isConverting}
                 className="w-full bg-slate-900 hover:bg-slate-800"
               >
                 {isConverting ? (
@@ -188,9 +278,13 @@ const DocumentProcessor = () => {
                     <span className="font-medium text-green-800">Conversion Complete</span>
                   </div>
                   <p className="text-sm text-green-700 mb-3">
-                    {conversionResult.originalFile} → {conversionResult.convertedFile}
+                    {conversionResult.original_file} → {conversionResult.converted_file}
                   </p>
-                  <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
+                  <Button 
+                    size="sm" 
+                    className="bg-green-600 hover:bg-green-700 text-white"
+                    onClick={handleDownload}
+                  >
                     <Download className="h-4 w-4 mr-2" />
                     Download Converted File
                   </Button>
@@ -225,7 +319,7 @@ const DocumentProcessor = () => {
               
               <Button 
                 onClick={handleAnalyze}
-                disabled={!file || isAnalyzing}
+                disabled={!fileId || isAnalyzing}
                 className="w-full bg-slate-700 hover:bg-slate-800"
               >
                 {isAnalyzing ? (
@@ -264,7 +358,7 @@ const DocumentProcessor = () => {
               <div>
                 <h4 className="font-semibold text-slate-900 mb-3">Key Findings</h4>
                 <ul className="space-y-2">
-                  {analysisResult.keyFindings.map((finding, index) => (
+                  {analysisResult.key_findings.map((finding, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-700">{finding}</span>
@@ -277,7 +371,7 @@ const DocumentProcessor = () => {
               <div>
                 <h4 className="font-semibold text-slate-900 mb-3">Risk Assessment</h4>
                 <div className="space-y-3">
-                  {analysisResult.riskAssessment.map((risk, index) => (
+                  {analysisResult.risk_assessment.map((risk, index) => (
                     <div key={index} className="p-3 border rounded-lg">
                       <div className="flex items-center mb-2">
                         <AlertCircle className={`h-4 w-4 mr-2 ${
