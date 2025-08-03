@@ -21,6 +21,7 @@ const DocumentProcessor = () => {
   const [conversionResult, setConversionResult] = useState(null);
   const [analysisResult, setAnalysisResult] = useState(null);
   const { toast } = useToast();
+  const { user, canUpload, canAnalyze, updateUserUsage, setIsSignInOpen } = useAuth();
 
   // Load supported formats on component mount
   useEffect(() => {
