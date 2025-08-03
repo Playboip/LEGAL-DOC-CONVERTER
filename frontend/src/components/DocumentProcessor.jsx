@@ -132,6 +132,25 @@ const DocumentProcessor = () => {
   };
 
   const handleAnalyze = async () => {
+    if (!user) {
+      toast({
+        title: "Sign in required",
+        description: "Please sign in to analyze documents.",
+        variant: "destructive",
+      });
+      setIsSignInOpen(true);
+      return;
+    }
+
+    if (!canAnalyze()) {
+      toast({
+        title: "Analysis limit reached",
+        description: "You've used your free analysis. Upgrade to Professional for unlimited AI analysis.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!fileId) {
       toast({
         title: "No file uploaded",
@@ -149,6 +168,9 @@ const DocumentProcessor = () => {
 
       setAnalysisResult(response.data);
       setIsAnalyzing(false);
+      
+      // Update usage for free users
+      updateUserUsage(0, 1);
       
       toast({
         title: "Analysis completed",
