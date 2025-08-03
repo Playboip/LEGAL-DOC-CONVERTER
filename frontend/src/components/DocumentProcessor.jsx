@@ -45,6 +45,26 @@ const DocumentProcessor = () => {
     const uploadedFile = event.target.files[0];
     if (!uploadedFile) return;
 
+    // Check authentication and usage limits
+    if (!user) {
+      toast({
+        title: "Sign in required",
+        description: "Please sign in to upload documents.",
+        variant: "destructive",
+      });
+      setIsSignInOpen(true);
+      return;
+    }
+
+    if (!canUpload()) {
+      toast({
+        title: "Upload limit reached",
+        description: "You've reached your upload limit. Upgrade to Professional for unlimited uploads.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsUploading(true);
     const formData = new FormData();
     formData.append('file', uploadedFile);
@@ -59,6 +79,9 @@ const DocumentProcessor = () => {
       setFile(uploadedFile);
       setFileId(response.data.file_id);
       setIsUploading(false);
+      
+      // Update usage for free users
+      updateUserUsage(1, 0);
       
       toast({
         title: "File uploaded successfully",
