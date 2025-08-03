@@ -38,11 +38,38 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API Documentation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Integrations</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Supported Formats</a></li>
+              <li>
+                <a 
+                  href="#features" 
+                  className="hover:text-white transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('features')?.scrollIntoView({behavior: 'smooth'});
+                  }}
+                >
+                  Features
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#pricing" 
+                  className="hover:text-white transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('pricing')?.scrollIntoView({behavior: 'smooth'});
+                  }}
+                >
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <button 
+                  onClick={() => window.openSecurityPage && window.openSecurityPage()}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Security
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -50,11 +77,38 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-slate-400">
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Status Page</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Legal Resources</a></li>
+              <li>
+                <a 
+                  href="mailto:support@legaldocconverter.com" 
+                  className="hover:text-white transition-colors"
+                >
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <button 
+                  onClick={() => window.openTermsOfService && window.openTermsOfService()}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => window.openPrivacyPolicy && window.openPrivacyPolicy()}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => window.openCookiePolicy && window.openCookiePolicy()}
+                  className="hover:text-white transition-colors text-left"
+                >
+                  Cookie Policy
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -64,7 +118,12 @@ const Footer = () => {
             <div className="space-y-3 text-slate-400">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">support@legaldocconverter.com</span>
+                <a 
+                  href="mailto:support@legaldocconverter.com"
+                  className="text-sm hover:text-white transition-colors"
+                >
+                  support@legaldocconverter.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4" />
@@ -100,12 +159,18 @@ const Footer = () => {
               >
                 Terms of Service
               </button>
-              <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+              <button 
+                onClick={() => window.openCookiePolicy && window.openCookiePolicy()}
+                className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+              >
                 Cookie Policy
-              </a>
-              <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
+              </button>
+              <button 
+                onClick={() => window.openSecurityPage && window.openSecurityPage()}
+                className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
+              >
                 Security
-              </a>
+              </button>
             </div>
           </div>
         </div>
