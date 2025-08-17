@@ -16,6 +16,41 @@
 # 
 ## user_problem_statement: {problem_statement}
 ## backend:
+  - task: "File Upload API Endpoint"
+    implemented: true
+    working: false
+    file: "/app/backend/server.py"
+    stuck_count: 1
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+        - agent: "main"
+        - comment: "USER FEEDBACK: PDF uploads failing intermittently (1/4 success rate). TXT files not uploading consistently. Need to investigate file size limits, CORS, chunked uploads, and error handling."
+
+  - task: "AdSense Integration Fix"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/components/ads/AdSenseAd.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+        - agent: "main"
+        - comment: "USER FEEDBACK: Google flagging 'ads on screens without publisher content'. Need to add proper publisher content around ads and fix AdSense policy compliance."
+
+  - task: "Affiliate Marketing Optimization"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: false
+        - agent: "main"
+        - comment: "USER REQUEST: Add affiliate marketing optimization features."
 ##   - task: "Task name"
 ##     implemented: true
 ##     working: true  # or false or "NA"
