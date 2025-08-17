@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Comprehensive testing of the LegalDocConverter website functionality including navigation, document upload/processing, conversion, AI analysis, visual/UX testing, and overall user flows"
+user_problem_statement: "Fix critical file upload issues - PDFs only upload 1 out of 4 attempts, TXT files don't always upload consistently. Fix AdSense integration - Google flagging 'ads on screens without publisher content'. Add affiliate marketing optimization."
 
 frontend:
   - task: "Header Navigation Links"
