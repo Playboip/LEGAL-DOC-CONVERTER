@@ -298,3 +298,5 @@ agent_communication:
     - message: "Starting comprehensive testing of LegalDocConverter website. Will test all core functionality including navigation, document processing, conversion, AI analysis, and user experience elements."
     - agent: "testing"
     - message: "COMPREHENSIVE TESTING COMPLETED SUCCESSFULLY! All major functionality tested and working perfectly. The LegalDocConverter website is fully functional with excellent UI/UX, proper backend integration, responsive design, and professional visual effects. No critical issues found. Ready for production use."
+    - agent: "main"
+    - message: "User reports critical file upload issues: PDF uploads failing 3/4 times, TXT files inconsistent. AdSense flagged by Google for policy violations. Need to test backend file upload API, implement chunked uploads, fix AdSense content policy, and add affiliate marketing features."
