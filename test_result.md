@@ -152,11 +152,11 @@ frontend:
 
   - task: "Document Upload Functionality"
     implemented: true
-    working: true
+    working: false
     file: "/app/frontend/src/components/DocumentProcessor.jsx"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
         - agent: "testing"
@@ -164,6 +164,9 @@ frontend:
         - working: true
         - agent: "testing"
         - comment: "TESTED: Document upload area is perfectly implemented. File input properly hidden, upload area is clickable, accepts correct file types (.pdf,.docx,.doc,.txt,.rtf,.odt), and has clear user instructions. Backend API connectivity confirmed."
+        - working: false
+        - agent: "user"
+        - comment: "USER FEEDBACK: PDF uploads failing - only 1 out of 4 PDFs upload successfully. TXT files and other files don't upload consistently. Site claims to convert PDFs but uploads are unreliable."
 
   - task: "Document Conversion"
     implemented: true
