@@ -13,6 +13,7 @@ import SignUpModal from "./components/auth/SignUpModal";
 import LegalModalManager from "./components/legal/LegalModalManager";
 import { Toaster } from "./components/ui/toaster";
 import { BannerAd, ContentRichAd } from "./components/ads/AdSenseAd";
+import AffiliateSection from "./components/marketing/AffiliateSection";
 
 const Home = () => {
   return (
@@ -30,7 +31,10 @@ const Home = () => {
       
       <DocumentProcessor />
       
-      {/* Content-rich ad before pricing for affiliate opportunities */}
+      {/* Affiliate marketing section */}
+      <AffiliateSection />
+      
+      {/* Content-rich ad before pricing for more affiliate opportunities */}
       <ContentRichAd topic="Professional Legal Software" />
       
       <Pricing />
