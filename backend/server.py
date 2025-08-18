@@ -135,8 +135,25 @@ async def get_supported_formats():
 async def upload_file(file: UploadFile = File(...)):
     """Upload a document for processing"""
     try:
+        # Validate file exists
+        if not file or not file.filename:
+            raise HTTPException(status_code=400, detail="No file provided")
+        
+        # Validate file size
+        file_content = await file.read()
+        file_size = len(file_content)
+        
+        if file_size == 0:
+            raise HTTPException(status_code=400, detail="File is empty")
+        
+        if file_size > MAX_FILE_SIZE:
+            raise HTTPException(
+                status_code=413,
+                detail=f"File too large. Maximum size allowed is {MAX_FILE_SIZE // (1024*1024)}MB"
+            )
+        
         # Validate file type
-        file_extension = file.filename.split('.')[-1].lower()
+        file_extension = file.filename.split('.')[-1].lower() if '.' in file.filename else ''
         if file_extension not in SUPPORTED_FORMATS["input"]:
             raise HTTPException(
                 status_code=400, 
@@ -146,14 +163,35 @@ async def upload_file(file: UploadFile = File(...)):
         # Generate unique file ID
         file_id = str(uuid.uuid4())
         
-        # Create temporary file
+        # Create temporary file with better error handling
         temp_dir = tempfile.gettempdir()
-        temp_file_path = os.path.join(temp_dir, f"{file_id}_{file.filename}")
+        os.makedirs(temp_dir, exist_ok=True)
         
-        # Save uploaded file
-        async with aiofiles.open(temp_file_path, 'wb') as f:
-            content = await file.read()
-            await f.write(content)
+        # Sanitize filename to prevent path traversal
+        safe_filename = "".join(c for c in file.filename if c.isalnum() or c in "._-")
+        temp_file_path = os.path.join(temp_dir, f"{file_id}_{safe_filename}")
+        
+        # Save uploaded file with atomic write
+        try:
+            async with aiofiles.open(temp_file_path, 'wb') as f:
+                await f.write(file_content)
+                
+            # Verify file was written correctly
+            if not os.path.exists(temp_file_path):
+                raise Exception("Failed to save uploaded file")
+                
+            actual_size = os.path.getsize(temp_file_path)
+            if actual_size != file_size:
+                raise Exception(f"File size mismatch: expected {file_size}, got {actual_size}")
+                
+        except Exception as e:
+            # Cleanup on failure
+            if os.path.exists(temp_file_path):
+                try:
+                    os.remove(temp_file_path)
+                except:
+                    pass
+            raise Exception(f"Failed to save file: {str(e)}")
         
         # Store file metadata
         file_info = {
@@ -161,23 +199,25 @@ async def upload_file(file: UploadFile = File(...)):
             "original_name": file.filename,
             "file_path": temp_file_path,
             "file_type": file_extension,
-            "file_size": len(content),
+            "file_size": file_size,
             "upload_time": datetime.utcnow(),
             "supported_conversions": [fmt for fmt in SUPPORTED_FORMATS["output"] if fmt != file_extension]
         }
         
         file_storage[file_id] = file_info
         
-        logger.info(f"File uploaded: {file.filename} with ID: {file_id}")
+        logger.info(f"File uploaded successfully: {file.filename} ({file_size} bytes) with ID: {file_id}")
         
         return FileUploadResponse(
             file_id=file_id,
             original_name=file.filename,
             file_type=file_extension,
-            file_size=len(content),
+            file_size=file_size,
             supported_conversions=file_info["supported_conversions"]
         )
         
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"Error uploading file: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Error uploading file: {str(e)}")
