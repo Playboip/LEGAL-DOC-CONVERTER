@@ -1,0 +1,768 @@
+{
+  "analysis": {
+    "total_tests": 9,
+    "successful_tests": 9,
+    "success_rate": 1.0,
+    "pdf_success_rate": 1.0,
+    "txt_success_rate": 1.0,
+    "failed_tests": [],
+    "avg_response_time": 0.03189720047844781
+  },
+  "detailed_results": {
+    "upload_tests": [
+      {
+        "file_type": "small_pdf",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.08170080184936523,
+        "error": null,
+        "response_data": {
+          "file_id": "94fe0694-d15d-4f4e-9709-d7a9120f4e7f",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "medium_pdf",
+        "file_path": "/tmp/test_medium.pdf",
+        "file_size": 512460,
+        "success": true,
+        "response_time": 0.023351669311523438,
+        "error": null,
+        "response_data": {
+          "file_id": "cd0a6f56-defc-4439-bab8-75c72de5f132",
+          "original_name": "test_medium.pdf",
+          "file_type": "pdf",
+          "file_size": 512460,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "large_pdf",
+        "file_path": "/tmp/test_large.pdf",
+        "file_size": 2097612,
+        "success": true,
+        "response_time": 0.04086804389953613,
+        "error": null,
+        "response_data": {
+          "file_id": "a14f6782-2366-4b51-83b1-5edf5bf26837",
+          "original_name": "test_large.pdf",
+          "file_type": "pdf",
+          "file_size": 2097612,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "small_txt",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.017000913619995117,
+        "error": null,
+        "response_data": {
+          "file_id": "f124fef1-841c-4797-bf6f-821723bc288a",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "medium_txt",
+        "file_path": "/tmp/test_medium.txt",
+        "file_size": 31028,
+        "success": true,
+        "response_time": 0.011776447296142578,
+        "error": null,
+        "response_data": {
+          "file_id": "7c48e6a3-e416-4017-b933-1759379507cd",
+          "original_name": "test_medium.txt",
+          "file_type": "txt",
+          "file_size": 31028,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "large_txt",
+        "file_path": "/tmp/test_large.txt",
+        "file_size": 290025,
+        "success": true,
+        "response_time": 0.015088796615600586,
+        "error": null,
+        "response_data": {
+          "file_id": "e8075857-e446-418d-86c4-26c779f68ac1",
+          "original_name": "test_large.txt",
+          "file_type": "txt",
+          "file_size": 290025,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "docx_file",
+        "file_path": "/tmp/test_document.txt",
+        "file_size": 256,
+        "success": true,
+        "response_time": 0.050493478775024414,
+        "error": null,
+        "response_data": {
+          "file_id": "4299d5c6-cd48-4a5e-a35c-208b0e496beb",
+          "original_name": "test_document.txt",
+          "file_type": "txt",
+          "file_size": 256,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "large_large_pdf",
+        "file_path": "/tmp/test_large.pdf",
+        "file_size": 2097612,
+        "success": true,
+        "response_time": 0.027905702590942383,
+        "error": null,
+        "response_data": {
+          "file_id": "942a1417-dee3-4615-b00c-2d6e8de306e1",
+          "original_name": "test_large.pdf",
+          "file_type": "pdf",
+          "file_size": 2097612,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      },
+      {
+        "file_type": "large_large_txt",
+        "file_path": "/tmp/test_large.txt",
+        "file_size": 290025,
+        "success": true,
+        "response_time": 0.01888895034790039,
+        "error": null,
+        "response_data": {
+          "file_id": "b6c7e946-fe8f-4d32-b857-509b927db95e",
+          "original_name": "test_large.txt",
+          "file_type": "txt",
+          "file_size": 290025,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200
+      }
+    ],
+    "conversion_tests": [
+      {
+        "conversion_test": true,
+        "status_code": 200,
+        "success": true,
+        "response_data": {
+          "conversion_id": "fb63db77-4eb5-4136-bb52-4c28b7fb2f01",
+          "status": "completed",
+          "download_url": "/api/download/fb63db77-4eb5-4136-bb52-4c28b7fb2f01",
+          "original_file": "test_small.txt",
+          "converted_file": "test_small.html"
+        }
+      }
+    ],
+    "analysis_tests": [],
+    "performance_tests": [
+      {
+        "file_type": "rapid_test_0",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.03797650337219238,
+        "error": null,
+        "response_data": {
+          "file_id": "3fa2d62d-8760-4cfe-8262-4b47a0b183eb",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 0
+      },
+      {
+        "file_type": "rapid_test_1",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.06573224067687988,
+        "error": null,
+        "response_data": {
+          "file_id": "2864f28f-9975-455a-98a0-900169011293",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 1
+      },
+      {
+        "file_type": "rapid_test_2",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.062033891677856445,
+        "error": null,
+        "response_data": {
+          "file_id": "8cc93b15-27ca-49da-ae45-59d4573696a9",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 2
+      },
+      {
+        "file_type": "rapid_test_3",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.06773519515991211,
+        "error": null,
+        "response_data": {
+          "file_id": "4437fa22-714f-4546-9d22-37ab687d0cd9",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 3
+      },
+      {
+        "file_type": "rapid_test_4",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.06525230407714844,
+        "error": null,
+        "response_data": {
+          "file_id": "c0950a46-d433-4072-9f0c-c72f210983c9",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 4
+      },
+      {
+        "file_type": "rapid_test_5",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.05267739295959473,
+        "error": null,
+        "response_data": {
+          "file_id": "39b1cf1e-2910-4a47-85b5-a53fd374b241",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 5
+      },
+      {
+        "file_type": "rapid_test_6",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.06125497817993164,
+        "error": null,
+        "response_data": {
+          "file_id": "d752aa30-1e88-44cf-9863-1c12b513f4a2",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 6
+      },
+      {
+        "file_type": "rapid_test_7",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.06507658958435059,
+        "error": null,
+        "response_data": {
+          "file_id": "b2110cdf-e17c-45b0-a729-87427d6e5c30",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 7
+      },
+      {
+        "file_type": "rapid_test_8",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.0655369758605957,
+        "error": null,
+        "response_data": {
+          "file_id": "598476e3-bf50-4a08-a224-0cd4e45e8404",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 8
+      },
+      {
+        "file_type": "rapid_test_9",
+        "file_path": "/tmp/test_small.pdf",
+        "file_size": 459,
+        "success": true,
+        "response_time": 0.06310844421386719,
+        "error": null,
+        "response_data": {
+          "file_id": "c21bcf90-b798-406f-b059-83c13a9da102",
+          "original_name": "test_small.pdf",
+          "file_type": "pdf",
+          "file_size": 459,
+          "supported_conversions": [
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 9
+      },
+      {
+        "file_type": "rapid_test_0",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.032187461853027344,
+        "error": null,
+        "response_data": {
+          "file_id": "a66a8018-6f8b-459a-b959-504170b4d807",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 0
+      },
+      {
+        "file_type": "rapid_test_1",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.06809449195861816,
+        "error": null,
+        "response_data": {
+          "file_id": "6bfb43e2-54a7-40f1-a9ae-704a7b27f9e5",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 1
+      },
+      {
+        "file_type": "rapid_test_2",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.07374358177185059,
+        "error": null,
+        "response_data": {
+          "file_id": "0d068cda-ce08-4937-b924-b0489b72c40f",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 2
+      },
+      {
+        "file_type": "rapid_test_3",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.03225517272949219,
+        "error": null,
+        "response_data": {
+          "file_id": "5a3ca037-b5ce-40bc-8182-2707396cf802",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 3
+      },
+      {
+        "file_type": "rapid_test_4",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.07517480850219727,
+        "error": null,
+        "response_data": {
+          "file_id": "ef3c35ae-8e40-475a-bdfb-50e9a9ec3610",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 4
+      },
+      {
+        "file_type": "rapid_test_5",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.03498196601867676,
+        "error": null,
+        "response_data": {
+          "file_id": "0b178248-faff-40c7-9a68-2cc43c332fad",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 5
+      },
+      {
+        "file_type": "rapid_test_6",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.0717315673828125,
+        "error": null,
+        "response_data": {
+          "file_id": "bdbde89b-87cf-4aa9-be9b-d533343b3962",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 6
+      },
+      {
+        "file_type": "rapid_test_7",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.0350193977355957,
+        "error": null,
+        "response_data": {
+          "file_id": "0394b60b-fa79-4bde-8750-a211bb8b66d5",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 7
+      },
+      {
+        "file_type": "rapid_test_8",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.03520917892456055,
+        "error": null,
+        "response_data": {
+          "file_id": "6665a26f-1ec4-442e-b5bc-d7be32109c88",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 8
+      },
+      {
+        "file_type": "rapid_test_9",
+        "file_path": "/tmp/test_small.txt",
+        "file_size": 59,
+        "success": true,
+        "response_time": 0.07286810874938965,
+        "error": null,
+        "response_data": {
+          "file_id": "cbe7b573-0997-4a46-9977-a5fa3ff1522e",
+          "original_name": "test_small.txt",
+          "file_type": "txt",
+          "file_size": 59,
+          "supported_conversions": [
+            "pdf",
+            "docx",
+            "doc",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        },
+        "status_code": 200,
+        "test_number": 9
+      }
+    ],
+    "error_tests": [
+      {
+        "file_type": "invalid_extension",
+        "file_path": "/tmp/tmpumpyi2an.xyz",
+        "file_size": 20,
+        "success": false,
+        "response_time": 0.008422374725341797,
+        "error": "HTTP 400: {\"detail\":\"Unsupported file type. Supported formats: pdf, docx, doc, txt, rtf, odt\"}",
+        "response_data": null,
+        "status_code": 400,
+        "test_type": "invalid_extension"
+      },
+      {
+        "endpoint": "/",
+        "status_code": 200,
+        "success": true,
+        "response_time": 0,
+        "response_data": {
+          "message": "Legal Document Converter API"
+        }
+      },
+      {
+        "endpoint": "/formats",
+        "status_code": 200,
+        "success": true,
+        "response_time": 0,
+        "response_data": {
+          "input": [
+            "pdf",
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt"
+          ],
+          "output": [
+            "pdf",
+            "docx",
+            "doc",
+            "txt",
+            "rtf",
+            "odt",
+            "html"
+          ]
+        }
+      }
+    ]
+  },
+  "backend_url": "https://a84f443b-f3f9-400e-8941-876221a7e0f8.preview.emergentagent.com",
+  "timestamp": 1755490444.4846232
+}
