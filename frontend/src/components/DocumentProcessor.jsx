@@ -65,35 +65,98 @@ const DocumentProcessor = () => {
       return;
     }
 
+    // Validate file size (50MB limit)
+    const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
+    if (uploadedFile.size > MAX_FILE_SIZE) {
+      toast({
+        title: "File too large",
+        description: `File size must be under ${MAX_FILE_SIZE / (1024*1024)}MB. Please compress your file and try again.`,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Validate file type
+    const allowedTypes = ['pdf', 'docx', 'doc', 'txt', 'rtf', 'odt'];
+    const fileExtension = uploadedFile.name.split('.').pop().toLowerCase();
+    if (!allowedTypes.includes(fileExtension)) {
+      toast({
+        title: "Unsupported file type",
+        description: `Please upload one of these file types: ${allowedTypes.join(', ').toUpperCase()}`,
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsUploading(true);
+    
+    // Create FormData with proper encoding
     const formData = new FormData();
     formData.append('file', uploadedFile);
 
-    try {
-      const response = await axios.post(`${API}/upload`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+    // Multiple retry attempts for reliability
+    const maxRetries = 3;
+    let attempt = 0;
+    
+    while (attempt < maxRetries) {
+      try {
+        const response = await axios.post(`${API}/upload`, formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
+          timeout: 60000, // 60 second timeout
+          onUploadProgress: (progressEvent) => {
+            const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+            // You could add a progress indicator here
+            console.log(`Upload progress: ${percentCompleted}%`);
+          },
+        });
 
-      setFile(uploadedFile);
-      setFileId(response.data.file_id);
-      setIsUploading(false);
-      
-      // Update usage for free users
-      updateUserUsage(1, 0);
-      
-      toast({
-        title: "File uploaded successfully",
-        description: `${uploadedFile.name} is ready for processing.`,
-      });
-    } catch (error) {
-      setIsUploading(false);
-      toast({
-        title: "Upload failed",
-        description: error.response?.data?.detail || "Failed to upload file. Please try again.",
-        variant: "destructive",
-      });
+        // Success
+        setFile(uploadedFile);
+        setFileId(response.data.file_id);
+        setIsUploading(false);
+        
+        // Update usage for free users
+        updateUserUsage(1, 0);
+        
+        toast({
+          title: "File uploaded successfully",
+          description: `${uploadedFile.name} (${(uploadedFile.size / 1024 / 1024).toFixed(2)}MB) is ready for processing.`,
+        });
+        
+        return; // Exit retry loop on success
+        
+      } catch (error) {
+        attempt++;
+        
+        if (attempt >= maxRetries) {
+          // Final attempt failed
+          setIsUploading(false);
+          
+          let errorMessage = "Failed to upload file. Please try again.";
+          
+          if (error.code === 'ECONNABORTED') {
+            errorMessage = "Upload timeout. Please check your connection and try again.";
+          } else if (error.response?.status === 413) {
+            errorMessage = "File too large for upload.";
+          } else if (error.response?.status === 400) {
+            errorMessage = error.response.data?.detail || "Invalid file format.";
+          } else if (error.response?.status >= 500) {
+            errorMessage = "Server error. Please try again in a few moments.";
+          }
+          
+          toast({
+            title: "Upload failed",
+            description: errorMessage,
+            variant: "destructive",
+          });
+        } else {
+          // Wait before retry
+          await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+          console.log(`Upload attempt ${attempt} failed, retrying...`);
+        }
+      }
     }
   };
 
