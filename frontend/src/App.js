@@ -12,8 +12,9 @@ import SignInModal from "./components/auth/SignInModal";
 import SignUpModal from "./components/auth/SignUpModal";
 import LegalModalManager from "./components/legal/LegalModalManager";
 import { Toaster } from "./components/ui/toaster";
-import { BannerAd, ContentRichAd } from "./components/ads/AdSenseAd";
+import { LegalDocumentGuideWithAd, LegalTechReportWithAd } from "./components/ads/AdSenseAd";
 import AffiliateSection from "./components/marketing/AffiliateSection";
+import LegalBlog from "./components/content/LegalBlog";
 
 const Home = () => {
   return (
@@ -21,23 +22,30 @@ const Home = () => {
       <Header />
       <Hero />
       
-      {/* Content-rich ad after hero section for better AdSense compliance */}
-      <ContentRichAd topic="Legal Document Conversion" />
+      {/* SUBSTANTIAL CONTENT: Complete Legal Document Guide with Ad Integration */}
+      <LegalDocumentGuideWithAd />
       
       <Features />
-      
-      {/* Banner ad between features and processor */}
-      <BannerAd />
       
       <DocumentProcessor />
       
       {/* Affiliate marketing section */}
       <AffiliateSection />
       
-      {/* Content-rich ad before pricing for more affiliate opportunities */}
-      <ContentRichAd topic="Professional Legal Software" />
+      {/* SUBSTANTIAL CONTENT: Legal Tech Industry Report with Ad Integration */}
+      <LegalTechReportWithAd />
       
       <Pricing />
+      <Footer />
+    </>
+  );
+};
+
+const BlogPage = () => {
+  return (
+    <>
+      <Header />
+      <LegalBlog />
       <Footer />
     </>
   );
@@ -50,6 +58,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </BrowserRouter>
         <SignInModal />
