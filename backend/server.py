@@ -112,10 +112,34 @@ class SupportedFormats(BaseModel):
     input: List[str]
     output: List[str]
 
-# In-memory storage for file metadata (temporary)
-file_storage = {}
-conversion_storage = {}
-analysis_storage = {}
+# File-based storage for metadata
+DATA_DIR = ROOT_DIR / "data"
+DATA_DIR.mkdir(exist_ok=True)
+FILE_STORAGE_PATH = DATA_DIR / "file_storage.json"
+CONVERSION_STORAGE_PATH = DATA_DIR / "conversion_storage.json"
+ANALYSIS_STORAGE_PATH = DATA_DIR / "analysis_storage.json"
+
+# Load existing data or initialize empty dictionaries
+def load_json_storage(path: Path) -> dict:
+    if path.exists():
+        try:
+            with open(path, 'r') as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError) as e:
+            logger.error(f"Error loading {path}: {e}")
+            return {}
+    return {}
+
+def save_json_storage(data: dict, path: Path):
+    try:
+        with open(path, 'w') as f:
+            json.dump(data, f, indent=2, default=str)
+    except IOError as e:
+        logger.error(f"Error saving {path}: {e}")
+
+file_storage = load_json_storage(FILE_STORAGE_PATH)
+conversion_storage = load_json_storage(CONVERSION_STORAGE_PATH)
+analysis_storage = load_json_storage(ANALYSIS_STORAGE_PATH)
 
 # Supported formats
 SUPPORTED_FORMATS = {
@@ -206,6 +230,7 @@ async def upload_file(file: UploadFile = File(...)):
         }
         
         file_storage[file_id] = file_info
+        save_json_storage(file_storage, FILE_STORAGE_PATH)
         
         logger.info(f"File uploaded successfully: {file.filename} ({file_size} bytes) with ID: {file_id}")
         
@@ -265,6 +290,7 @@ async def convert_file(request: ConversionRequest):
         }
         
         conversion_storage[conversion_id] = conversion_info
+        save_json_storage(conversion_storage, CONVERSION_STORAGE_PATH)
         
         logger.info(f"File converted: {file_info['original_name']} to {request.target_format}")
         
@@ -309,6 +335,7 @@ async def analyze_document(request: AnalysisRequest):
         }
         
         analysis_storage[analysis_id] = analysis_info
+        save_json_storage(analysis_storage, ANALYSIS_STORAGE_PATH)
         
         logger.info(f"Document analyzed: {file_info['original_name']}")
         
@@ -373,13 +400,24 @@ async def cleanup_old_files():
                 if (current_time - analysis_info["analysis_time"]).seconds > 3600:
                     analyses_to_remove.append(analysis_id)
             
-            # Remove from memory
-            for file_id in files_to_remove:
-                del file_storage[file_id]
-            for conv_id in conversions_to_remove:
-                del conversion_storage[conv_id]
-            for analysis_id in analyses_to_remove:
-                del analysis_storage[analysis_id]
+            # Remove from memory and save
+            if files_to_remove:
+                for file_id in files_to_remove:
+                    if file_id in file_storage:
+                        del file_storage[file_id]
+                save_json_storage(file_storage, FILE_STORAGE_PATH)
+
+            if conversions_to_remove:
+                for conv_id in conversions_to_remove:
+                    if conv_id in conversion_storage:
+                        del conversion_storage[conv_id]
+                save_json_storage(conversion_storage, CONVERSION_STORAGE_PATH)
+
+            if analyses_to_remove:
+                for analysis_id in analyses_to_remove:
+                    if analysis_id in analysis_storage:
+                        del analysis_storage[analysis_id]
+                save_json_storage(analysis_storage, ANALYSIS_STORAGE_PATH)
             
             if files_to_remove or conversions_to_remove or analyses_to_remove:
                 logger.info(f"Cleaned up {len(files_to_remove)} files, {len(conversions_to_remove)} conversions, {len(analyses_to_remove)} analyses")
