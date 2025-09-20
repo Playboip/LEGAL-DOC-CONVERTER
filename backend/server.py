@@ -400,23 +400,34 @@ async def cleanup_old_files():
                 if (current_time - analysis_info["analysis_time"]).seconds > 3600:
                     analyses_to_remove.append(analysis_id)
             
-            # Remove from memory and save
+            # Remove from memory
+            file_changes = False
             if files_to_remove:
                 for file_id in files_to_remove:
                     if file_id in file_storage:
                         del file_storage[file_id]
-                save_json_storage(file_storage, FILE_STORAGE_PATH)
+                        file_changes = True
 
+            conversion_changes = False
             if conversions_to_remove:
                 for conv_id in conversions_to_remove:
                     if conv_id in conversion_storage:
                         del conversion_storage[conv_id]
-                save_json_storage(conversion_storage, CONVERSION_STORAGE_PATH)
+                        conversion_changes = True
 
+            analysis_changes = False
             if analyses_to_remove:
                 for analysis_id in analyses_to_remove:
                     if analysis_id in analysis_storage:
                         del analysis_storage[analysis_id]
+                        analysis_changes = True
+
+            # Save changes if any
+            if file_changes:
+                save_json_storage(file_storage, FILE_STORAGE_PATH)
+            if conversion_changes:
+                save_json_storage(conversion_storage, CONVERSION_STORAGE_PATH)
+            if analysis_changes:
                 save_json_storage(analysis_storage, ANALYSIS_STORAGE_PATH)
             
             if files_to_remove or conversions_to_remove or analyses_to_remove:
