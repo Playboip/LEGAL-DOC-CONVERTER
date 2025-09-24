@@ -2,21 +2,23 @@ import React from 'react';
 import { Card, CardContent } from '../ui/card';
 import { ScrollArea } from '../ui/scroll-area';
 import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Lock, Key, Server, Eye, AlertTriangle, CheckCircle } from 'lucide-react';
 
-const SecurityPage = ({ onBack }) => {
+const SecurityPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Button 
-            onClick={onBack} 
-            variant="ghost" 
-            className="mb-4 text-slate-600 hover:text-blue-600"
-          >
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Button>
+          <Link to="/">
+            <Button
+              variant="ghost"
+              className="mb-4 text-slate-600 hover:text-blue-600"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
           
           <div className="flex items-center space-x-3 mb-4">
             <div className="p-2 bg-gradient-to-br from-red-600 to-rose-600 rounded-lg shadow-lg">

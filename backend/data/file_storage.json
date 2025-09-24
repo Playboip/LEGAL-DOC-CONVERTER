@@ -1,0 +1,962 @@
+{
+  "ed72c19a-a5f4-4bf5-823a-db860e19ac51": {
+    "file_id": "ed72c19a-a5f4-4bf5-823a-db860e19ac51",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/ed72c19a-a5f4-4bf5-823a-db860e19ac51_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.598936",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "4d44014c-fd69-47a5-b886-04b263ff628d": {
+    "file_id": "4d44014c-fd69-47a5-b886-04b263ff628d",
+    "original_name": "test_medium.pdf",
+    "file_path": "/tmp/4d44014c-fd69-47a5-b886-04b263ff628d_test_medium.pdf",
+    "file_type": "pdf",
+    "file_size": 512460,
+    "upload_time": "2025-09-24 21:07:43.612457",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "ce7269a7-300d-4964-8e99-f9b883afc018": {
+    "file_id": "ce7269a7-300d-4964-8e99-f9b883afc018",
+    "original_name": "test_large.pdf",
+    "file_path": "/tmp/ce7269a7-300d-4964-8e99-f9b883afc018_test_large.pdf",
+    "file_type": "pdf",
+    "file_size": 2097612,
+    "upload_time": "2025-09-24 21:07:43.665749",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "820c1671-ec07-43c9-a218-0435920a523d": {
+    "file_id": "820c1671-ec07-43c9-a218-0435920a523d",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/820c1671-ec07-43c9-a218-0435920a523d_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.673781",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "d8a42199-39f9-497f-8da0-6a0f44dff51c": {
+    "file_id": "d8a42199-39f9-497f-8da0-6a0f44dff51c",
+    "original_name": "test_medium.txt",
+    "file_path": "/tmp/d8a42199-39f9-497f-8da0-6a0f44dff51c_test_medium.txt",
+    "file_type": "txt",
+    "file_size": 31028,
+    "upload_time": "2025-09-24 21:07:43.679586",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "230abb30-96e8-4509-8597-c3984223566b": {
+    "file_id": "230abb30-96e8-4509-8597-c3984223566b",
+    "original_name": "test_large.txt",
+    "file_path": "/tmp/230abb30-96e8-4509-8597-c3984223566b_test_large.txt",
+    "file_type": "txt",
+    "file_size": 290025,
+    "upload_time": "2025-09-24 21:07:43.688114",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "88629990-719d-4379-98a5-be33d9c3e234": {
+    "file_id": "88629990-719d-4379-98a5-be33d9c3e234",
+    "original_name": "test_document.txt",
+    "file_path": "/tmp/88629990-719d-4379-98a5-be33d9c3e234_test_document.txt",
+    "file_type": "txt",
+    "file_size": 256,
+    "upload_time": "2025-09-24 21:07:43.693928",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "400320ef-2863-4082-9b64-07033f25212e": {
+    "file_id": "400320ef-2863-4082-9b64-07033f25212e",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/400320ef-2863-4082-9b64-07033f25212e_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.736055",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "5fce84f8-2aa5-496b-99f8-9588d5957405": {
+    "file_id": "5fce84f8-2aa5-496b-99f8-9588d5957405",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/5fce84f8-2aa5-496b-99f8-9588d5957405_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.742028",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "c719d360-f385-4c26-a0fb-4f6a5b572f93": {
+    "file_id": "c719d360-f385-4c26-a0fb-4f6a5b572f93",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/c719d360-f385-4c26-a0fb-4f6a5b572f93_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.742999",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "939e57ba-6184-4801-b43e-06b7ed633cd0": {
+    "file_id": "939e57ba-6184-4801-b43e-06b7ed633cd0",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/939e57ba-6184-4801-b43e-06b7ed633cd0_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.744500",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "69b2a898-087d-4de5-9d17-00df07a69fe9": {
+    "file_id": "69b2a898-087d-4de5-9d17-00df07a69fe9",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/69b2a898-087d-4de5-9d17-00df07a69fe9_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.745428",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "9ba6bc37-ba5f-4124-b954-6721d4c9175c": {
+    "file_id": "9ba6bc37-ba5f-4124-b954-6721d4c9175c",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/9ba6bc37-ba5f-4124-b954-6721d4c9175c_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.746110",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "6a9e9062-48ca-4886-82d6-5700f45c1f34": {
+    "file_id": "6a9e9062-48ca-4886-82d6-5700f45c1f34",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/6a9e9062-48ca-4886-82d6-5700f45c1f34_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.748339",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "a5c83f0f-5377-4ba5-9016-3389ca242a03": {
+    "file_id": "a5c83f0f-5377-4ba5-9016-3389ca242a03",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/a5c83f0f-5377-4ba5-9016-3389ca242a03_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.749082",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "b250dbb0-98b1-47d8-886e-52b2cd3c2f31": {
+    "file_id": "b250dbb0-98b1-47d8-886e-52b2cd3c2f31",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/b250dbb0-98b1-47d8-886e-52b2cd3c2f31_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.751334",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "27c2a535-fc77-4df8-86b8-7245ecb14994": {
+    "file_id": "27c2a535-fc77-4df8-86b8-7245ecb14994",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/27c2a535-fc77-4df8-86b8-7245ecb14994_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:07:43.752137",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "68a10e4c-e7b8-40b5-b0a7-d1f2586aebbf": {
+    "file_id": "68a10e4c-e7b8-40b5-b0a7-d1f2586aebbf",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/68a10e4c-e7b8-40b5-b0a7-d1f2586aebbf_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.780271",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "2350d960-5420-43ce-8e28-6dec118702b2": {
+    "file_id": "2350d960-5420-43ce-8e28-6dec118702b2",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/2350d960-5420-43ce-8e28-6dec118702b2_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.781769",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "b35ce987-e853-4050-a650-218a02241be6": {
+    "file_id": "b35ce987-e853-4050-a650-218a02241be6",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/b35ce987-e853-4050-a650-218a02241be6_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.783264",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "37849d73-36a5-4fd6-870b-ba4b127a6bba": {
+    "file_id": "37849d73-36a5-4fd6-870b-ba4b127a6bba",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/37849d73-36a5-4fd6-870b-ba4b127a6bba_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.784520",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "8fdc957f-b241-4118-a7a4-59a450813080": {
+    "file_id": "8fdc957f-b241-4118-a7a4-59a450813080",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/8fdc957f-b241-4118-a7a4-59a450813080_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.785349",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "63a80f86-96e4-4bf6-9b24-3f763d13c7bc": {
+    "file_id": "63a80f86-96e4-4bf6-9b24-3f763d13c7bc",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/63a80f86-96e4-4bf6-9b24-3f763d13c7bc_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.787269",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "9bbaf914-d852-4a13-87fb-9e718bedb4ea": {
+    "file_id": "9bbaf914-d852-4a13-87fb-9e718bedb4ea",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/9bbaf914-d852-4a13-87fb-9e718bedb4ea_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.788764",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "fa99b4f1-f8be-473f-ac60-0a6419759196": {
+    "file_id": "fa99b4f1-f8be-473f-ac60-0a6419759196",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/fa99b4f1-f8be-473f-ac60-0a6419759196_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.789847",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "7e0dfa6b-f13a-42c5-9210-701a5b21c9ba": {
+    "file_id": "7e0dfa6b-f13a-42c5-9210-701a5b21c9ba",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/7e0dfa6b-f13a-42c5-9210-701a5b21c9ba_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.792985",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "a5926718-75df-4d2f-a407-93fbeaa22bdf": {
+    "file_id": "a5926718-75df-4d2f-a407-93fbeaa22bdf",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/a5926718-75df-4d2f-a407-93fbeaa22bdf_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.794078",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "0f6f024c-cf34-4bb0-9c35-62ab5010f2e7": {
+    "file_id": "0f6f024c-cf34-4bb0-9c35-62ab5010f2e7",
+    "original_name": "test_large.pdf",
+    "file_path": "/tmp/0f6f024c-cf34-4bb0-9c35-62ab5010f2e7_test_large.pdf",
+    "file_type": "pdf",
+    "file_size": 2097612,
+    "upload_time": "2025-09-24 21:07:43.827375",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "2cfa3555-d3f1-4e95-acc8-a1c0ad23d625": {
+    "file_id": "2cfa3555-d3f1-4e95-acc8-a1c0ad23d625",
+    "original_name": "test_large.txt",
+    "file_path": "/tmp/2cfa3555-d3f1-4e95-acc8-a1c0ad23d625_test_large.txt",
+    "file_type": "txt",
+    "file_size": 290025,
+    "upload_time": "2025-09-24 21:07:43.839162",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "ec7f7984-0fbc-4a7f-946b-39c9648a3670": {
+    "file_id": "ec7f7984-0fbc-4a7f-946b-39c9648a3670",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/ec7f7984-0fbc-4a7f-946b-39c9648a3670_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:07:43.912730",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "62801711-1502-4eac-b850-0b72bbd74118": {
+    "file_id": "62801711-1502-4eac-b850-0b72bbd74118",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/62801711-1502-4eac-b850-0b72bbd74118_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.533138",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "3329a613-55b2-4087-af96-3495ab1ebbcc": {
+    "file_id": "3329a613-55b2-4087-af96-3495ab1ebbcc",
+    "original_name": "test_medium.pdf",
+    "file_path": "/tmp/3329a613-55b2-4087-af96-3495ab1ebbcc_test_medium.pdf",
+    "file_type": "pdf",
+    "file_size": 512460,
+    "upload_time": "2025-09-24 21:15:38.575353",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "c8f67ecb-e4f5-4f65-8079-c66db64d50f7": {
+    "file_id": "c8f67ecb-e4f5-4f65-8079-c66db64d50f7",
+    "original_name": "test_large.pdf",
+    "file_path": "/tmp/c8f67ecb-e4f5-4f65-8079-c66db64d50f7_test_large.pdf",
+    "file_type": "pdf",
+    "file_size": 2097612,
+    "upload_time": "2025-09-24 21:15:38.647258",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "5e7467df-7c22-4ca8-8a30-1cc202590b6b": {
+    "file_id": "5e7467df-7c22-4ca8-8a30-1cc202590b6b",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/5e7467df-7c22-4ca8-8a30-1cc202590b6b_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.656107",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "fc7abdd7-22f0-4cce-be42-b2ac1362f346": {
+    "file_id": "fc7abdd7-22f0-4cce-be42-b2ac1362f346",
+    "original_name": "test_medium.txt",
+    "file_path": "/tmp/fc7abdd7-22f0-4cce-be42-b2ac1362f346_test_medium.txt",
+    "file_type": "txt",
+    "file_size": 31028,
+    "upload_time": "2025-09-24 21:15:38.663225",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "9c34446b-516a-4d41-bf42-342831cdf397": {
+    "file_id": "9c34446b-516a-4d41-bf42-342831cdf397",
+    "original_name": "test_large.txt",
+    "file_path": "/tmp/9c34446b-516a-4d41-bf42-342831cdf397_test_large.txt",
+    "file_type": "txt",
+    "file_size": 290025,
+    "upload_time": "2025-09-24 21:15:38.671562",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "4d4b01f5-1830-43a2-b4f8-cbd93142d130": {
+    "file_id": "4d4b01f5-1830-43a2-b4f8-cbd93142d130",
+    "original_name": "test_document.txt",
+    "file_path": "/tmp/4d4b01f5-1830-43a2-b4f8-cbd93142d130_test_document.txt",
+    "file_type": "txt",
+    "file_size": 256,
+    "upload_time": "2025-09-24 21:15:38.678194",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "a7d12e18-6648-4fe8-b3e2-1713e7143586": {
+    "file_id": "a7d12e18-6648-4fe8-b3e2-1713e7143586",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/a7d12e18-6648-4fe8-b3e2-1713e7143586_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.723329",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "d16d37e0-70b7-4929-8e70-3f3f83b3d913": {
+    "file_id": "d16d37e0-70b7-4929-8e70-3f3f83b3d913",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/d16d37e0-70b7-4929-8e70-3f3f83b3d913_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.725850",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "fe830108-6d4f-4088-8ecb-037a8e519b93": {
+    "file_id": "fe830108-6d4f-4088-8ecb-037a8e519b93",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/fe830108-6d4f-4088-8ecb-037a8e519b93_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.727504",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "33dc3094-8207-49f2-94ff-759edc9ef477": {
+    "file_id": "33dc3094-8207-49f2-94ff-759edc9ef477",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/33dc3094-8207-49f2-94ff-759edc9ef477_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.729303",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "61c90a91-ac4f-41cb-b526-fe002fffe0af": {
+    "file_id": "61c90a91-ac4f-41cb-b526-fe002fffe0af",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/61c90a91-ac4f-41cb-b526-fe002fffe0af_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.730624",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "6c87aef4-f3be-4da7-b5b5-b89918df95fd": {
+    "file_id": "6c87aef4-f3be-4da7-b5b5-b89918df95fd",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/6c87aef4-f3be-4da7-b5b5-b89918df95fd_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.731963",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "0873b916-78f0-4014-a692-c1b03604f841": {
+    "file_id": "0873b916-78f0-4014-a692-c1b03604f841",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/0873b916-78f0-4014-a692-c1b03604f841_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.733401",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "ba03b114-17e9-4fe1-8262-b3ee20a167bf": {
+    "file_id": "ba03b114-17e9-4fe1-8262-b3ee20a167bf",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/ba03b114-17e9-4fe1-8262-b3ee20a167bf_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.735823",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "0f5ce1fb-e3c3-4000-ae2f-67d2fb094faa": {
+    "file_id": "0f5ce1fb-e3c3-4000-ae2f-67d2fb094faa",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/0f5ce1fb-e3c3-4000-ae2f-67d2fb094faa_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.737389",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "6f13a914-3779-45da-8c0d-8266b975c9ab": {
+    "file_id": "6f13a914-3779-45da-8c0d-8266b975c9ab",
+    "original_name": "test_small.pdf",
+    "file_path": "/tmp/6f13a914-3779-45da-8c0d-8266b975c9ab_test_small.pdf",
+    "file_type": "pdf",
+    "file_size": 459,
+    "upload_time": "2025-09-24 21:15:38.741667",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "7b1c154d-2d29-4c44-bead-a40add770992": {
+    "file_id": "7b1c154d-2d29-4c44-bead-a40add770992",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/7b1c154d-2d29-4c44-bead-a40add770992_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.771103",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "5e0f4afa-c8b5-4904-9159-6be7c837e05e": {
+    "file_id": "5e0f4afa-c8b5-4904-9159-6be7c837e05e",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/5e0f4afa-c8b5-4904-9159-6be7c837e05e_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.774369",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "cc3a18c7-dfca-4cb4-9c7f-042d3e5b4b09": {
+    "file_id": "cc3a18c7-dfca-4cb4-9c7f-042d3e5b4b09",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/cc3a18c7-dfca-4cb4-9c7f-042d3e5b4b09_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.776580",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "16f8106e-f721-4828-aea1-6da08cc50c5a": {
+    "file_id": "16f8106e-f721-4828-aea1-6da08cc50c5a",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/16f8106e-f721-4828-aea1-6da08cc50c5a_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.778342",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "04d83082-5d3a-42c8-96e4-5580b71bd270": {
+    "file_id": "04d83082-5d3a-42c8-96e4-5580b71bd270",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/04d83082-5d3a-42c8-96e4-5580b71bd270_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.780523",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "d916992d-ac4d-4eff-a2e0-c6ab0d88522a": {
+    "file_id": "d916992d-ac4d-4eff-a2e0-c6ab0d88522a",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/d916992d-ac4d-4eff-a2e0-c6ab0d88522a_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.782232",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "5986e0a4-0a15-4f92-a166-831b950c2a1b": {
+    "file_id": "5986e0a4-0a15-4f92-a166-831b950c2a1b",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/5986e0a4-0a15-4f92-a166-831b950c2a1b_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.784261",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "e65938f1-6a45-4f5e-a886-2e210728506d": {
+    "file_id": "e65938f1-6a45-4f5e-a886-2e210728506d",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/e65938f1-6a45-4f5e-a886-2e210728506d_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.788158",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "0d953f54-ddbe-40cd-98e3-cf48da2cf97d": {
+    "file_id": "0d953f54-ddbe-40cd-98e3-cf48da2cf97d",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/0d953f54-ddbe-40cd-98e3-cf48da2cf97d_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.789713",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "5fb4e311-6cb2-4892-819d-f334c1975518": {
+    "file_id": "5fb4e311-6cb2-4892-819d-f334c1975518",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/5fb4e311-6cb2-4892-819d-f334c1975518_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.792968",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "b1cce86f-f518-4440-b410-55771036be36": {
+    "file_id": "b1cce86f-f518-4440-b410-55771036be36",
+    "original_name": "test_large.pdf",
+    "file_path": "/tmp/b1cce86f-f518-4440-b410-55771036be36_test_large.pdf",
+    "file_type": "pdf",
+    "file_size": 2097612,
+    "upload_time": "2025-09-24 21:15:38.825047",
+    "supported_conversions": [
+      "docx",
+      "doc",
+      "txt",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "a75acfe4-ab20-49f6-a305-8f6a759d629f": {
+    "file_id": "a75acfe4-ab20-49f6-a305-8f6a759d629f",
+    "original_name": "test_large.txt",
+    "file_path": "/tmp/a75acfe4-ab20-49f6-a305-8f6a759d629f_test_large.txt",
+    "file_type": "txt",
+    "file_size": 290025,
+    "upload_time": "2025-09-24 21:15:38.835022",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  },
+  "5dbbf7b0-e9a5-4f9d-b0df-887c0189bf15": {
+    "file_id": "5dbbf7b0-e9a5-4f9d-b0df-887c0189bf15",
+    "original_name": "test_small.txt",
+    "file_path": "/tmp/5dbbf7b0-e9a5-4f9d-b0df-887c0189bf15_test_small.txt",
+    "file_type": "txt",
+    "file_size": 59,
+    "upload_time": "2025-09-24 21:15:38.873123",
+    "supported_conversions": [
+      "pdf",
+      "docx",
+      "doc",
+      "rtf",
+      "odt",
+      "html"
+    ]
+  }
+}

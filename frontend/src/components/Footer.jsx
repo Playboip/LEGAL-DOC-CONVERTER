@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Scale, Mail, Phone, MapPin, Twitter, Linkedin, Facebook } from 'lucide-react';
 
 const Footer = () => {
@@ -22,13 +23,13 @@ const Footer = () => {
               Trusted by legal professionals worldwide for seamless document processing.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+              <a href="https://twitter.com/legaldocconverter" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+              <a href="https://linkedin.com/company/legaldocconverter" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+              <a href="https://facebook.com/legaldocconverter" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
             </div>
@@ -63,12 +64,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <button 
-                  onClick={() => window.openSecurityPage && window.openSecurityPage()}
-                  className="hover:text-white transition-colors text-left"
-                >
+                <Link to="/security" className="hover:text-white transition-colors">
                   Security
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -86,28 +84,19 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <button 
-                  onClick={() => window.openTermsOfService && window.openTermsOfService()}
-                  className="hover:text-white transition-colors text-left"
-                >
+                <Link to="/terms-of-service" className="hover:text-white transition-colors">
                   Terms of Service
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => window.openPrivacyPolicy && window.openPrivacyPolicy()}
-                  className="hover:text-white transition-colors text-left"
-                >
+                <Link to="/privacy-policy" className="hover:text-white transition-colors">
                   Privacy Policy
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => window.openCookiePolicy && window.openCookiePolicy()}
-                  className="hover:text-white transition-colors text-left"
-                >
+                <Link to="/cookie-policy" className="hover:text-white transition-colors">
                   Cookie Policy
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -147,30 +136,18 @@ const Footer = () => {
               © 2025 LegalDocConverter.com. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <button 
-                onClick={() => window.openPrivacyPolicy && window.openPrivacyPolicy()}
-                className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
-              >
+              <Link to="/privacy-policy" className="text-slate-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </button>
-              <button 
-                onClick={() => window.openTermsOfService && window.openTermsOfService()}
-                className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
-              >
+              </Link>
+              <Link to="/terms-of-service" className="text-slate-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </button>
-              <button 
-                onClick={() => window.openCookiePolicy && window.openCookiePolicy()}
-                className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
-              >
+              </Link>
+              <Link to="/cookie-policy" className="text-slate-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
-              </button>
-              <button 
-                onClick={() => window.openSecurityPage && window.openSecurityPage()}
-                className="text-slate-400 hover:text-white text-sm transition-colors cursor-pointer"
-              >
+              </Link>
+              <Link to="/security" className="text-slate-400 hover:text-white text-sm transition-colors">
                 Security
-              </button>
+              </Link>
             </div>
           </div>
         </div>

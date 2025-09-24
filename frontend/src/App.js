@@ -12,9 +12,14 @@ import SignInModal from "./components/auth/SignInModal";
 import SignUpModal from "./components/auth/SignUpModal";
 import LegalModalManager from "./components/legal/LegalModalManager";
 import { Toaster } from "./components/ui/toaster";
-import { LegalDocumentGuideWithAd, LegalTechReportWithAd } from "./components/ads/AdSenseAd";
+import LegalDocumentGuideWithAd from "./components/content/LegalDocumentGuideWithAd";
+import LegalTechReportWithAd from "./components/content/LegalTechReportWithAd";
 import AffiliateSection from "./components/marketing/AffiliateSection";
 import LegalBlog from "./components/content/LegalBlog";
+import SecurityPage from "./components/legal/SecurityPage";
+import TermsOfService from "./components/legal/TermsOfService";
+import PrivacyPolicy from "./components/legal/PrivacyPolicy";
+import CookiePolicy from "./components/legal/CookiePolicy";
 
 const Home = () => {
   return (
@@ -59,6 +64,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/security" element={<SecurityPage />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
           </Routes>
         </BrowserRouter>
         <SignInModal />
