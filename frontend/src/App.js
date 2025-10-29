@@ -12,7 +12,8 @@ import SignInModal from "./components/auth/SignInModal";
 import SignUpModal from "./components/auth/SignUpModal";
 import LegalModalManager from "./components/legal/LegalModalManager";
 import { Toaster } from "./components/ui/toaster";
-import { LegalDocumentGuideWithAd, LegalTechReportWithAd } from "./components/ads/AdSenseAd";
+import LegalDocumentGuideWithAd from "./components/content/LegalDocumentGuideWithAd";
+import LegalTechReportWithAd from "./components/content/LegalTechReportWithAd";
 import AffiliateSection from "./components/marketing/AffiliateSection";
 import LegalBlog from "./components/content/LegalBlog";
 
