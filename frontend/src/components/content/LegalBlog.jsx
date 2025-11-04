@@ -1,50 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LegalDocumentGuideWithAd, LegalTechReportWithAd } from '../ads/AdSenseAd';
+import { blogPosts } from '../../mock';
 
 const LegalBlog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "5 Essential Legal Document Formats Every Attorney Should Master",
-      excerpt: "Understanding the nuances of PDF/A, DOCX, and other legal document formats is crucial for modern legal practice. Learn which formats to use when and why.",
-      date: "2025-01-15",
-      readTime: "8 min read",
-      category: "Document Management"
-    },
-    {
-      id: 2,
-      title: "AI in Legal Practice: Document Analysis Revolution",
-      excerpt: "Artificial intelligence is transforming how lawyers review contracts and legal documents. Discover the latest AI tools and their practical applications.",
-      date: "2025-01-12",
-      readTime: "12 min read",
-      category: "Legal Technology"
-    },
-    {
-      id: 3,
-      title: "Compliance Checklist: Legal Document Security Best Practices",
-      excerpt: "Protect client confidentiality and ensure regulatory compliance with these essential security practices for legal document handling.",
-      date: "2025-01-10",
-      readTime: "15 min read",
-      category: "Compliance"
-    },
-    {
-      id: 4,
-      title: "Court Filing Requirements: Digital Document Standards 2025",
-      excerpt: "Stay current with the latest court filing requirements and digital document standards across different jurisdictions.",
-      date: "2025-01-08",
-      readTime: "10 min read",
-      category: "Court Procedures"
-    },
-    {
-      id: 5,
-      title: "Contract Review Automation: Tools and Techniques",
-      excerpt: "Streamline your contract review process with automated tools and AI-powered analysis. Increase accuracy while reducing review time.",
-      date: "2025-01-05",
-      readTime: "14 min read",
-      category: "Contract Law"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -88,9 +47,9 @@ const LegalBlog = () => {
                   
                   <div className="flex items-center justify-between">
                     <span className="text-gray-500 text-sm">{post.date}</span>
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                    <Link to={`/blog/${post.id}`} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                       Read More
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </article>

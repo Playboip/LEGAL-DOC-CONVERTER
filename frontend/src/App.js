@@ -15,6 +15,7 @@ import { Toaster } from "./components/ui/toaster";
 import { LegalDocumentGuideWithAd, LegalTechReportWithAd } from "./components/ads/AdSenseAd";
 import AffiliateSection from "./components/marketing/AffiliateSection";
 import LegalBlog from "./components/content/LegalBlog";
+import BlogPostPage from "./components/content/blog/BlogPostPage";
 
 const Home = () => {
   return (
@@ -59,6 +60,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:id" element={<BlogPostPage />} />
           </Routes>
         </BrowserRouter>
         <SignInModal />
